@@ -8,22 +8,26 @@ const SocialProfile = ({ usersProfile }) => {
         const id = stats.followers * Math.random();
         return (
           <div key={id} className={styles.card}>
-            <div>
-              <img src={avatar} alt={"Аватар пользователя" + "-" + name} />
+            <div className={styles.imageContainer}>
+              <img
+                className={styles.image}
+                src={avatar}
+                alt={"Аватар пользователя" + "-" + name}
+              />
               <p>{name}</p>
               <p>@{tag}</p>
               <p>{location}</p>
             </div>
-            <ul>
-              <li>
+            <ul className={styles.list}>
+              <li className={styles.listItems}>
                 <span>Followers</span>
                 <span>{stats.followers}</span>
               </li>
-              <li>
+              <li className={styles.listItems}>
                 <span>Views</span>
                 <span>{stats.views}</span>
               </li>
-              <li>
+              <li className={styles.listItems}>
                 <span>Likes</span>
                 <span>{stats.likes}</span>
               </li>
