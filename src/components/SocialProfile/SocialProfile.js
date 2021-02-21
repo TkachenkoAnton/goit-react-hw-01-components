@@ -2,9 +2,9 @@ import React from "react";
 
 const SocialProfile = ({ name, tag, location, avatar, stats }) => {
   return (
-    <div>
+    <>
       <div>
-        <img src={avatar} alt="Аватар пользователя" />
+        <img src={avatar} alt={"Аватар пользователя" + "-" + name} />
         <p>{name}</p>
         <p>@{tag}</p>
         <p>{location}</p>
@@ -23,7 +23,7 @@ const SocialProfile = ({ name, tag, location, avatar, stats }) => {
           <span>{stats.likes}</span>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

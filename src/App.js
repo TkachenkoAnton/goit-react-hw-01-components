@@ -4,17 +4,19 @@ import SocialProfile from "./components/SocialProfile/SocialProfile";
 
 const App = () => {
   return (
-    <div>
+    <>
       {users.map(({ name, tag, location, avatar, stats }) => (
-        <SocialProfile
-          name={name}
-          tag={tag}
-          location={location}
-          avatar={avatar}
-          stats={stats}
-        />
+        <div key={stats.followers * Math.random()}>
+          <SocialProfile
+            name={name}
+            tag={tag}
+            location={location}
+            avatar={avatar}
+            stats={stats}
+          />
+        </div>
       ))}
-    </div>
+    </>
   );
 };
 
