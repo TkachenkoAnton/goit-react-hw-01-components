@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./container.module.scss";
 
 const Container = ({ children }) => {
@@ -8,5 +9,9 @@ const Container = ({ children }) => {
       <div className={styles.container}>{children}</div>
     </>
   );
+};
+
+Container.propTypes = {
+  children: PropTypes.array.isRequired,
 };
 export default Container;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./socialProfile.module.scss";
 
 const SocialProfile = ({ usersProfile }) => {
@@ -37,6 +38,10 @@ const SocialProfile = ({ usersProfile }) => {
       })}
     </>
   );
+};
+
+SocialProfile.propTypes = {
+  usersProfile: PropTypes.array.isRequired,
 };
 
 export default SocialProfile;
