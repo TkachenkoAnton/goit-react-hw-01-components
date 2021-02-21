@@ -1,25 +1,42 @@
-.card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.cardTable {
+  table-layout: fixed;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px;
+  border-collapse: collapse;
+  background-color: darkgrey;
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+.tableHead {
+  background-color: cadetblue;
+}
+
+.tableHeadItem,
+.tableBodyItem {
+  width: calc(100% / 3);
+  text-align: center;
+  border: 1px solid black;
+}
+
+.tableHeadItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.tableBodyItem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.tableBody {
+  &:nth-child(odd) {
+    background-color: cornsilk;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .card {
-    width: 50%;
-    padding-right: 34px;
-    padding-left: 34px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .card {
-    width: 50%px;
-    padding-right: 75px;
-    padding-left: 75px;
+  .cardTable {
+    width: calc((100% / 2) - 10px);
+    margin-bottom: 0px;
   }
 }

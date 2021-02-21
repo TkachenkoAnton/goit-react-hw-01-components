@@ -3,21 +3,21 @@ import styles from "./transactionHistory.module.scss";
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className={styles.card}>
-      <thead>
+    <table className={styles.cardTable}>
+      <thead className={styles.tableHead}>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={styles.tableHeadItem}>Type</th>
+          <th className={styles.tableHeadItem}>Amount</th>
+          <th className={styles.tableHeadItem}>Currency</th>
         </tr>
       </thead>
 
       {items.map(({ id, type, amount, currency }) => (
-        <tbody key={id}>
+        <tbody key={id} className={styles.tableBody}>
           <tr>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+            <td className={styles.tableBodyItem}>{type}</td>
+            <td className={styles.tableBodyItem}>{amount}</td>
+            <td className={styles.tableBodyItem}>{currency}</td>
           </tr>
         </tbody>
       ))}
