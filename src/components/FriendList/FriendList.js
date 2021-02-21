@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./friendList.module.scss";
 
 const FriendList = ({ friends }) => {
   return (
-    <ul>
+    <ul className={styles.card}>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <li key={id}>
           <span>{isOnline ? "Online" : "Offline"}</span>

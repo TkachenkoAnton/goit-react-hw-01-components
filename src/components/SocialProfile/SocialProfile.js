@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./socialProfile.module.scss";
 
 const SocialProfile = ({ usersProfile }) => {
   return (
@@ -6,7 +7,7 @@ const SocialProfile = ({ usersProfile }) => {
       {usersProfile.map(({ name, tag, location, avatar, stats }) => {
         const id = stats.followers * Math.random();
         return (
-          <div key={id}>
+          <div key={id} className={styles.card}>
             <div>
               <img src={avatar} alt={"Аватар пользователя" + "-" + name} />
               <p>{name}</p>
