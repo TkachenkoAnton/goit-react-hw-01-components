@@ -1,24 +1,14 @@
 import React from "react";
 import users from "./components/SocialProfile/user.json";
+import statisticalData from "./components/Statistics/statistical-data.json";
 import SocialProfile from "./components/SocialProfile/SocialProfile";
+import Statistics from "./components/Statistics/Statistics";
 
 const App = () => {
   return (
     <>
-      {users.map(({ name, tag, location, avatar, stats }) => {
-        const id = stats.followers * Math.random();
-        return (
-          <div key={id}>
-            <SocialProfile
-              name={name}
-              tag={tag}
-              location={location}
-              avatar={avatar}
-              stats={stats}
-            />
-          </div>
-        );
-      })}
+      <SocialProfile usersProfiles={users} />
+      <Statistics title="Upload stats" stats={statisticalData} />
     </>
   );
 };
