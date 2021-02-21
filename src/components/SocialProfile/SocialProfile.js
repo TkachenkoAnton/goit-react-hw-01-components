@@ -1,9 +1,9 @@
 import React from "react";
 
-const SocialProfile = ({ usersProfiles }) => {
+const SocialProfile = ({ usersProfile }) => {
   return (
     <>
-      {usersProfiles.map(({ name, tag, location, avatar, stats }) => {
+      {usersProfile.map(({ name, tag, location, avatar, stats }) => {
         const id = stats.followers * Math.random();
         return (
           <div key={id}>
